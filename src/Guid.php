@@ -19,4 +19,9 @@ class Guid implements GuidInterface
     {
         return $this->uuid->toString();
     }
+
+    public function toBytes(): string
+    {
+        return $this->uuid->getBytes();
+    }
 }

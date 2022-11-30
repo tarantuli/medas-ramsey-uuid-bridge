@@ -161,12 +161,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tarantuli/medas-service-manager.git",
-                "reference": "d718a5e9c10fff494601467114cfea789878f005"
+                "reference": "4ef691436851d629eb9f2188f868849f3fa6abe4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-service-manager/zipball/d718a5e9c10fff494601467114cfea789878f005",
-                "reference": "d718a5e9c10fff494601467114cfea789878f005",
+                "url": "https://api.github.com/repos/tarantuli/medas-service-manager/zipball/4ef691436851d629eb9f2188f868849f3fa6abe4",
+                "reference": "4ef691436851d629eb9f2188f868849f3fa6abe4",
                 "shasum": ""
             },
             "require": {
@@ -200,7 +200,7 @@
                 "source": "https://github.com/tarantuli/medas-service-manager/tree/dev",
                 "issues": "https://github.com/tarantuli/medas-service-manager/issues"
             },
-            "time": "2022-11-30T14:43:26+00:00"
+            "time": "2022-11-30T14:56:21+00:00"
         },
         {
             "name": "ramsey/collection",
