@@ -1,6 +1,6 @@
 {
-    "name": "morphp/medas-placeholder",
-    "description": "Medas placeholder",
+    "name": "morphp/medas-ramsey-uuid-bridge",
+    "description": "Medas ramsey/uuid bridge",
     "authors": [
         {
             "name": "Patrick Morpey",
@@ -11,15 +11,16 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "morphp/medas-service-manager": "dev-dev"
+        "morphp/medas-service-manager": "dev-dev",
+        "ramsey/uuid": "^4.6"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
-            "Medas\\Placeholder\\": "src/",
-            "Medas\\PlaceholderTest\\": "tests/"
+            "Medas\\RamseyUuidBridge\\": "src/",
+            "Medas\\RamseyUuidBridgeTest\\": "tests/"
         }
     }
 }

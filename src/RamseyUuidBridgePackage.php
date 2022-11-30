@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Medas\Placeholder;
+namespace Medas\RamseyUuidBridge;
 
 use Medas\ServiceManager\{AsSingleton, BasePackage};
 
-class PlaceholderPackage extends BasePackage
+class RamseyUuidBridgePackage extends BasePackage
 {
     use AsSingleton;
 
