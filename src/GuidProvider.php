@@ -21,4 +21,9 @@ class GuidProvider implements GuidProviderInterface
     {
         return new Guid((new UuidFactory())->fromBytes($bytes));
     }
+
+    public function fromString(string $string): GuidInterface
+    {
+        return new Guid(Uuid::fromString($string));
+    }
 }
