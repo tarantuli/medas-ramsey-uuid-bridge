@@ -3,9 +3,16 @@
 declare(strict_types=1);
 
 use Medas\RamseyUuidBridge\RamseyUuidBridgePackage;
-use Medas\ServiceManager\ServiceManager;
+use Medas\ServiceManager\{ServiceConfig, ServiceManager};
 
 chdir(__DIR__);
 
-ServiceManager::get()
-    ->addPackage(RamseyUuidBridgePackage::instance());
+new ServiceManager(function (): ServiceConfig {
+    $config = new ServiceConfig();
+
+    $config->addPackages([
+        RamseyUuidBridgePackage::instance(),
+    ]);
+
+    return $config;
+});
