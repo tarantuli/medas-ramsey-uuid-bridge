@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Medas\RamseyUuidBridge;
 
 use Medas\ServiceManager\Attributes\Service;
-use Medas\ServiceManager\Values\Interfaces\{Guid as GuidInterface, GuidProvider as GuidProviderInterface};
+use Medas\ServiceManager\Interfaces\{Guid as GuidInterface, GuidProvider as GuidProviderInterface};
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidFactory;
 
