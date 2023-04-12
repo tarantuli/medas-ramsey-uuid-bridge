@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Medas\RamseyUuidBridge;
 
-use Medas\ServiceManager\Interfaces\Guid as GuidInterface;
+use Medas\Core\Interfaces\Guid as GuidInterface;
 use Ramsey\Uuid\UuidInterface;
 
 class Guid implements GuidInterface

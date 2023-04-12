@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Medas\RamseyUuidBridgeTest\Functional;
 
+use Medas\Core\Interfaces\Guid;
 use Medas\RamseyUuidBridge\GuidProvider;
-use Medas\ServiceManager\Interfaces\Guid;
 use PHPUnit\Framework\TestCase;
 
 class GuidProviderTest extends TestCase
