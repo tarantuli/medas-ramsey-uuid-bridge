@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace Medas\RamseyUuidBridge;
 
-use Medas\ServiceManager\{AsSingleton, BasePackage};
+use Medas\Core\AsSingleton;
+use Medas\ServiceManager\BasePackage;
 
 class RamseyUuidBridgePackage extends BasePackage
 {
