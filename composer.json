@@ -1,6 +1,9 @@
 {
     "name": "morphp/medas-ramsey-uuid-bridge",
     "description": "Medas ramsey/uuid bridge",
+    "keywords": [
+        "data manipulation"
+    ],
     "authors": [
         {
             "name": "Patrick Morpey",
