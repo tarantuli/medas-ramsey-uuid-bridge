@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Medas\RamseyUuidBridge;
 
-use Medas\Core\Interfaces\Guid as GuidInterface;
+use Medas\Core\Interfaces\Uuid as MedasUuidInterface;
 use Ramsey\Uuid\UuidInterface;
 
-class Guid implements GuidInterface
+class Uuid implements MedasUuidInterface
 {
     public function __construct(
         private readonly UuidInterface $uuid,
