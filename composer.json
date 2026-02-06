@@ -14,6 +14,7 @@
   "type": "library",
   "require": {
     "morphp/medas-core": "^2",
+    "php": "^8.4",
     "ramsey/uuid": "^4.6"
   },
   "require-dev": {
