@@ -21,7 +21,7 @@ class UuidProvider implements UuidProviderInterface
 
     public function fromBytes(string $bytes): UuidInterface
     {
-        return new Uuid((new UuidFactory())->fromBytes($bytes));
+        return new Uuid(new UuidFactory()->fromBytes($bytes));
     }
 
     public function fromString(string $string): UuidInterface
