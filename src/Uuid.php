@@ -7,10 +7,10 @@ namespace Medas\RamseyUuidBridge;
 use Medas\Core\Interfaces\Uuid as MedasUuidInterface;
 use Ramsey\Uuid\UuidInterface;
 
-class Uuid implements MedasUuidInterface
+readonly class Uuid implements MedasUuidInterface
 {
     public function __construct(
-        private readonly UuidInterface $uuid,
+        private UuidInterface $uuid,
     )
     {
     }
