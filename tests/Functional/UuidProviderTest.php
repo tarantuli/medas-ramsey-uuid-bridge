@@ -24,4 +24,11 @@ class UuidProviderTest extends TestCase
 
         self::assertInstanceOf(Uuid::class, service(UuidProvider::class)->fromBytes($bytes));
     }
+
+    public function testFromString(): void
+    {
+        $uuid = service(UuidProvider::class)->create();
+        $string = (string) $uuid;
+        self::assertSame($string, (string) service(UuidProvider::class)->fromString($string));
+    }
 }

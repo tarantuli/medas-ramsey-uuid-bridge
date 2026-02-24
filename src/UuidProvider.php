@@ -14,6 +14,13 @@ use Ramsey\Uuid\{Uuid as RamseyUuid, UuidFactory};
 #[Service]
 class UuidProvider implements UuidProviderInterface
 {
+    private UuidFactory $factory;
+
+    public function __construct()
+    {
+        $this->factory = new UuidFactory();
+    }
+
     public function create(): UuidInterface
     {
         return new Uuid(RamseyUuid::uuid7());
@@ -21,11 +28,21 @@ class UuidProvider implements UuidProviderInterface
 
     public function fromBytes(string $bytes): UuidInterface
     {
-        return new Uuid(new UuidFactory()->fromBytes($bytes));
+        try {
+            return new Uuid($this->factory->fromBytes($bytes));
+        }
+        catch (\Throwable $e) {
+            throw new Exceptions\InvalidBytesGiven($bytes, $e);
+        }
     }
 
     public function fromString(string $string): UuidInterface
     {
-        return new Uuid(RamseyUuid::fromString($string));
+        try {
+            return new Uuid(RamseyUuid::fromString($string));
+        }
+        catch (\Throwable $e) {
+            throw new Exceptions\InvalidStringGiven($string, $e);
+        }
     }
 }
