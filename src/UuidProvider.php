@@ -6,13 +6,14 @@ namespace Medas\RamseyUuidBridge;
 
 use Medas\Core\{
     Attributes\Service,
+    Interfaces\ObjectToArrayHandler,
     Interfaces\Uuid as UuidInterface,
     Interfaces\UuidProvider as UuidProviderInterface
 };
 use Ramsey\Uuid\{Uuid as RamseyUuid, UuidFactory};
 
 #[Service]
-class UuidProvider implements UuidProviderInterface
+class UuidProvider implements UuidProviderInterface, ObjectToArrayHandler
 {
     private UuidFactory $factory;
 
@@ -44,5 +45,16 @@ class UuidProvider implements UuidProviderInterface
         catch (\Throwable $e) {
             throw new Exceptions\InvalidStringGiven($string, $e);
         }
+    }
+
+    public function toArray(object $value): array
+    {
+        /** @var Uuid $value */
+        return [$value->toBytes()];
+    }
+
+    public function toObject(array $value): object
+    {
+        return $this->fromBytes($value[0]);
     }
 }
