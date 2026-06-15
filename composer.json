@@ -12,12 +12,13 @@
   ],
   "type": "library",
   "require": {
-    "morphp/medas-core": "^3",
+    "morphp/medas-core": "^4",
     "php": "^8.4",
     "ramsey/uuid": "^4.6"
   },
   "require-dev": {
-    "morphp/medas-service-manager": "^3",
+    "morphp/medas-object-instantiator": "^4",
+    "morphp/medas-service-manager": "^4",
     "phpunit/phpunit": "^10"
   },
   "autoload": {
