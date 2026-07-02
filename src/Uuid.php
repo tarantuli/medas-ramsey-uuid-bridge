@@ -21,6 +21,11 @@ readonly class Uuid implements MedasUuidInterface
         return $this->uuid->toString();
     }
 
+    public function jsonSerialize(): string
+    {
+        return $this->uuid->toString();
+    }
+
     public function toBytes(): string
     {
         return $this->uuid->getBytes();
